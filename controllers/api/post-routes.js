@@ -76,6 +76,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+
 router.post('/', (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
@@ -109,7 +110,7 @@ router.put('/:id', (req, res) => {
       where: {
         id: req.params.id
       }
-    }
+    } 
   )
     .then(dbPostData => {
       if (!dbPostData) {
